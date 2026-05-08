@@ -184,26 +184,19 @@
   .screenshot-body {
     padding: 1rem;
     display: flex;
-    gap: 0.6rem;
+    flex-direction: column;
+    gap: 0.8rem;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
   }
-  /* Unify display height across before/after for consistent visual size */
+  /* Stack two pages vertically, same max-width for consistent size */
   .screenshot-body img {
-    height: 420px;
-    width: auto;
-    max-width: 48%;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
     object-fit: contain;
     border-radius: 6px;
     border: 1px solid var(--border);
-  }
-  @media (max-width: 640px) {
-    .screenshot-body img {
-      height: auto;
-      max-width: 90%;
-      max-height: 320px;
-    }
   }
   .screenshot-caption {
     text-align: center;
